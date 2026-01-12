@@ -1,12 +1,9 @@
 # Claude Command: Create a Pull Request
 
-This command is used to create a pull request on Github from the current branch to the default branch (which is usually main or master).
+This command is used to create a pull request on Github from the current branch to the branch that this branch was created from.
 
-## What to do
-1. Find the name of the default branch in the project.
-2. If you are already on the default branch:
-  - If there are uncommited changes, then create a new branch. 
-  - If there are no uncommited changes, then exit telling the user that there are no changes to create a pull request for.
-3. Commit the changes using the /gc command.
-4. Push the changes to the remote repository. This step may involve creating a new branch, or pushing to an existing branch.
-5. Create a pull request on Github pointing to the default branch. You can use the `gh` command line tool to do this. The pull request description and title must be well written based on the diff between the current branch and the default branch.
+## What to do:
+1. If there are uncommited changes, then exit the flow with an error message.
+2. Find the name of the branch that this branch was created from.
+3. If the current branch is the default branch of the project (main or master for example), then exit the flow with an error message.
+4. Otherwise, create a pull request on pointing to the branch that this branch was created from. You can use the `gh` command line tool to do this. The pull request description and title must be well written based on the diff between the current branch and the branch that this branch was created from.
