@@ -16,3 +16,5 @@ There is a repo here on this machine: `/Users/rishabhpoddar/Desktop/trythisapp/d
     - Third message is the lunch meal plan (this should clearly state its for lunch, the name of the meal and the ingredients + their weights - all in hindi).
     - Fourth message is the dinner meal plan (this should clearly state its for dinner, the name of the meal and the ingredients + their weights - all in hindi).
 6. Finally, if you have modified any script / json file during the workflow, then git add, commit and push the changes to the remote repository.
+
+CRITICAL: Do NOT edit the `diet-database.json` database during the workflow under any circumstances!
